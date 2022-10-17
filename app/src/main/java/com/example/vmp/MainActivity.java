@@ -4,6 +4,7 @@ import static androidx.core.content.PackageManagerCompat.LOG_TAG;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.Dialog;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Environment;
@@ -11,7 +12,12 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-
+import android.widget.TextView;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.os.Bundle;
+import androidx.fragment.app.DialogFragment;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
@@ -71,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
                 editText1 = findViewById(R.id.ID5);
                             output = output + "\",\"p4_addr_live\":\"" + editText1.getText().toString();
                 editText1 = findViewById(R.id.ID6);
-                            output = output + "\",\"p5_doc\":\"" + editText1.getText().toString();
+                            output = output + "\",\"p5_doc\":\"Паспорт гражданина РФ " + editText1.getText().toString();
                 editText1 = findViewById(R.id.ID7);
                             output = output + "\",\"p6_oms\":\"" + editText1.getText().toString();
                 editText1 = findViewById(R.id.ID8);
@@ -111,6 +117,7 @@ public class MainActivity extends AppCompatActivity {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
+
 
 
              /*   try {
