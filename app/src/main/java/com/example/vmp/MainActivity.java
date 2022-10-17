@@ -4,7 +4,6 @@ import static androidx.core.content.PackageManagerCompat.LOG_TAG;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
-import android.app.Dialog;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Environment;
@@ -12,28 +11,16 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
-import android.app.AlertDialog;
-import android.app.Dialog;
-import android.os.Bundle;
-import androidx.fragment.app.DialogFragment;
-import androidx.annotation.NonNull;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
 import java.util.Calendar;
-import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
     private void checkPermissions() {
@@ -119,26 +106,6 @@ public class MainActivity extends AppCompatActivity {
                 }
 
 
-
-             /*   try {
-                    // отрываем поток для записи
-                    File direct = new File("/storage/0/Download/"+name+".json");
-                    OutputStream outFile = openFileOutput(name+".json", MODE_PRIVATE);
-                    BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(
-                   outFile ));
-                    // пишем данные
-                    bw.write(name);
-                    // закрываем поток
-                    bw.close();
-                    Log.d(LOG_TAG, "Файл записан");
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-
-                String from = "/data/data/com.example.vmp/files/"+name+".json";
-                String to = "/storage/0/Download/"+name+".json"; */
 
 
 
