@@ -54,27 +54,37 @@ public class MainActivity extends AppCompatActivity {
                 String output = "\",\"p1_fio\":\""+editText.getText().toString();
                 String xren;
                 int year = Calendar.getInstance().get(Calendar.YEAR);
-
+                    editText.setText("");
                 EditText editText1 = findViewById(R.id.ID2);
                             output = output + "\",\"p2_dr\":\"" + editText1.getText().toString();
+                editText1.setText("");
                 editText1 = findViewById(R.id.ID3);
                             output = output + "\",\"p22_sex\":\"" + editText1.getText().toString();
+                editText1.setText("");
                 editText1 = findViewById(R.id.ID4);
                             output = output + "\",\"p3_addr_reg\":\"" + editText1.getText().toString();
+                editText1.setText("");
                 editText1 = findViewById(R.id.ID5);
                             output = output + "\",\"p4_addr_live\":\"" + editText1.getText().toString();
+                editText1.setText("");
                 editText1 = findViewById(R.id.ID6);
                             output = output + "\",\"p5_doc\":\"Паспорт гражданина РФ " + editText1.getText().toString();
+                editText1.setText("");
                 editText1 = findViewById(R.id.ID7);
                             output = output + "\",\"p6_oms\":\"" + editText1.getText().toString();
+                editText1.setText("");
                 editText1 = findViewById(R.id.ID8);
                             output = output + "\",\"p7_snils\":\"" + editText1.getText().toString();
+                editText1.setText("");
                 editText1 = findViewById(R.id.ID9);
                             output = output + "\",\"p8_lgota\":\"" + editText1.getText().toString();
+                editText1.setText("");
                 editText1 = findViewById(R.id.ID10);
                             output = output + "\",\"p9_social_grupp\":\"" + editText1.getText().toString();
+                editText1.setText("");
                 editText1 = findViewById(R.id.ID11);
                             output = output + "\",\"p10_phone\":\"" + editText1.getText().toString();
+                editText1.setText("");
 
 
 
@@ -104,9 +114,6 @@ public class MainActivity extends AppCompatActivity {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-
-
-
 
 
             }
