@@ -35,7 +35,22 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint=" Имя, фамилия, отчество"
-                android:inputType="textPersonName" />
+                android:inputType="textCapWords|textAutoCorrect"
+                />
+
+            <EditText
+                android:id="@+id/ID2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="50dp"
+                android:baselineAligned="false"
+                android:ems="10"
+                android:hint=" Дата, месяц и год рождения дд.мм.гггг"
+                android:inputType="date"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
                 android:id="@+id/ID3"
@@ -45,7 +60,8 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint=" Пол М или Ж"
-                android:inputType="textPersonName"
+                android:maxLength="1"
+                android:inputType="textCapCharacters"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
@@ -59,21 +75,7 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint=" Адрес регистрации"
-                android:inputType="textPersonName"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <EditText
-                android:id="@+id/ID2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="50dp"
-                android:layout_weight="1"
-                android:ems="10"
-                android:hint=" Дата, месяц и год рождения"
-                android:inputType="textPersonName"
+                android:inputType="textCapSentences"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
@@ -87,7 +89,7 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint=" Адрес фактического проживания"
-                android:inputType="textPersonName"
+                android:inputType="textCapSentences"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
@@ -101,7 +103,7 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint=" Документ, удостоверяющий личность"
-                android:inputType="textPersonName"
+                android:inputType="textCapSentences"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
@@ -115,7 +117,7 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint=" Полис ОМС"
-                android:inputType="textPersonName"
+                android:inputType="text"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
@@ -129,7 +131,7 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint=" СНИЛС"
-                android:inputType="textPersonName"
+                android:inputType="phone"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.555"
                 app:layout_constraintStart_toStartOf="parent"
@@ -143,7 +145,7 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint=" Категория льготы"
-                android:inputType="textPersonName"
+                android:inputType="textCapSentences"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
@@ -157,7 +159,7 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint=" Социальная группа"
-                android:inputType="textPersonName"
+                android:inputType="textCapSentences"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
@@ -171,7 +173,7 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint=" Номер телефона"
-                android:inputType="textPersonName"
+                android:inputType="phone"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
@@ -179,22 +181,23 @@
 
             <TextView
                 android:id="@+id/textView1"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
                 android:layout_marginTop="50dp"
                 android:text="    Нажмите кнопку Ввести и передайте устройство врачу" />
 
+            <Button
+                android:id="@+id/button_id"
+                android:layout_width="match_parent"
+                android:layout_height="53dp"
+                android:layout_marginEnd="19dp"
+                android:text="Ввести"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
         </LinearLayout>
     </ScrollView>
 
-    <Button
-        android:id="@+id/button_id"
-        android:layout_width="100dp"
-        android:layout_height="53dp"
-        android:layout_marginEnd="19dp"
-        android:text="Ввести"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
