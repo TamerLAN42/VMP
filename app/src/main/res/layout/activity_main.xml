@@ -35,7 +35,7 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:hint=" Имя, фамилия, отчество"
-                android:inputType="textCapWords|textAutoCorrect"
+                android:inputType="textCapWords"
                 />
 
             <EditText
@@ -74,7 +74,7 @@
                 android:layout_marginTop="50dp"
                 android:layout_weight="1"
                 android:ems="10"
-                android:hint=" Адрес регистрации"
+                android:hint=" Область, город и адрес регистрации"
                 android:inputType="textCapSentences"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -88,7 +88,7 @@
                 android:layout_marginTop="50dp"
                 android:layout_weight="1"
                 android:ems="10"
-                android:hint=" Адрес фактического проживания"
+                android:hint=" Область, город и адрес фактического проживания"
                 android:inputType="textCapSentences"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
@@ -184,7 +184,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="32dp"
                 android:layout_marginTop="50dp"
-                android:text="    Нажмите кнопку Ввести и передайте устройство врачу" />
+                android:text="    После заполнения всей информации передайте устройство врачу" />
 
             <Button
                 android:id="@+id/button_id"
