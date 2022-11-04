@@ -130,7 +130,9 @@ public class MainActivity extends AppCompatActivity {
                 try {
                     // открываем поток для записи
                     BufferedWriter bw = new BufferedWriter(new FileWriter(sdFile));
-                    bw.write("{\"p00_dd\":\""+ Calendar.getInstance().get(Calendar.DAY_OF_MONTH) + "\",\"p01_mm\":\"" + Calendar.getInstance().get(Calendar.MONTH) + "\",\"p02_yyyy\":\"" + Calendar.getInstance().get(Calendar.YEAR) + "" +output+"\",\"p11_diag_osn\":\"\",\"p12_profile\":\"\",\"p13_vmp_group_num\":\"\",\"p14_vmp_vid_code\":\"\",\"p15_vmp_vid_name\":\"\",\"p16_diag_code_mkb10\":\"\",\"p17_mo_name\":\"\",\"p18_lech_prof_mer\":\"\",\"p19_lab_issl\":\"\",\"p20_instr_issl\":\"\",\"p21_ill_history\":\"\"}");        // пишем данные
+                    int month = java.util.Calendar.getInstance().get(Calendar.MONTH);
+                    month++;
+                    bw.write("{\"p00_dd\":\""+ Calendar.getInstance().get(Calendar.DAY_OF_MONTH) + "\",\"p01_mm\":\"" + month + "\",\"p02_yyyy\":\"" + Calendar.getInstance().get(Calendar.YEAR) + "" +output+"\",\"p11_diag_osn\":\"\",\"p12_profile\":\"\",\"p13_vmp_group_num\":\"\",\"p14_vmp_vid_code\":\"\",\"p15_vmp_vid_name\":\"\",\"p16_diag_code_mkb10\":\"\",\"p17_mo_name\":\"\",\"p18_lech_prof_mer\":\"\",\"p19_lab_issl\":\"\",\"p20_instr_issl\":\"\",\"p21_ill_history\":\"\"}");        // пишем данные
                     // закрываем поток
                     bw.close();
                 } catch (IOException e) {
